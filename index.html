@@ -14,91 +14,43 @@
     />
     <link
       rel="icon"
-      type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
+      type="image/png"
     />
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <script src="script.js"></script>
+    <script src="script.js" type="module" defer></script>
     <title>Frontend Mentor | Article preview component</title>
   </head>
   <body>
     <main>
-      <img
-        src="./images/drawers.jpg"
-        width="327"
-        height="200"
-        alt="Furniture drawer"
-      />
-      <section>
-        <h1>
-          Shift the overall look and feel by adding these wonderful touches to
-          furniture in your home
-        </h1>
-        <p>
-          Ever been in a room and felt like something was missing? Perhaps it
-          felt slightly bare and uninviting. I’ve got some simple tips to help
-          you make any room feel complete.
-        </p>
-        <footer>
-          <img
-            src="./images/avatar-michelle.jpg"
-            width="40"
-            height="40"
-            alt="Avatar of Michelle Appleton"
-          />
-          <strong>Michelle Appleton</strong>
-          <span>28 Jun 2020</span>
-          <button aria-label="Share article">
+      <article>
+        <img
+          src="./images/drawers.jpg"
+          width="327"
+          height="200"
+          alt="Furniture drawer"
+        />
+        <section>
+          <h1>
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h1>
+          <p>
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+          <footer>
             <img
-              src="./images/icon-share.svg"
-              width="15"
-              height="13"
-              alt=""
-              role="presentation"
+              src="./images/avatar-michelle.jpg"
+              width="40"
+              height="40"
+              alt="Avatar of Michelle Appleton"
             />
-          </button>
-          <span class="tooltip" role="tooltip">
-            Share
-            <ul>
-              <li>
-                <a
-                  href="https://www.facebook.com/"
-                  aria-label="Share on Facebook"
-                >
-                  <img
-                    src="./images/icon-facebook.svg"
-                    width="20"
-                    height="20"
-                    alt="Facebook icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="https://x.com/?lang=en" aria-label="Share on Twitter">
-                  <img
-                    src="./images/icon-twitter.svg"
-                    width="20"
-                    height="17"
-                    alt="Twitter icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.pinterest.com/"
-                  aria-label="Share on Pinterest"
-                >
-                  <img
-                    src="./images/icon-pinterest.svg"
-                    width="20"
-                    height="20"
-                    alt="Share via Pinterest"
-                  />
-                </a>
-              </li>
-            </ul>
-            <button aria-label="Share article">
+            <strong>Michelle Appleton</strong>
+            <span>28 Jun 2020</span>
+            <button aria-label="Share article" aria-describedby="tooltip">
               <img
                 src="./images/icon-share.svg"
                 width="15"
@@ -107,9 +59,68 @@
                 role="presentation"
               />
             </button>
-          </span>
-        </footer>
-      </section>
+            <span id="tooltip" role="tooltip">
+              Share
+              <ul>
+                <li>
+                  <a
+                    href="https://www.facebook.com/"
+                    aria-label="Share on Facebook"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="./images/icon-facebook.svg"
+                      width="20"
+                      height="20"
+                      alt="Facebook icon"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://x.com/?lang=en"
+                    aria-label="Share on Twitter"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="./images/icon-twitter.svg"
+                      width="20"
+                      height="17"
+                      alt="Twitter icon"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.pinterest.com/"
+                    aria-label="Share on Pinterest"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="./images/icon-pinterest.svg"
+                      width="20"
+                      height="20"
+                      alt="Share via Pinterest"
+                    />
+                  </a>
+                </li>
+              </ul>
+              <button aria-label="Share article">
+                <img
+                  src="./images/icon-share.svg"
+                  width="15"
+                  height="13"
+                  alt=""
+                  role="presentation"
+                />
+              </button>
+            </span>
+          </footer>
+        </section>
+      </article>
     </main>
   </body>
 </html>
