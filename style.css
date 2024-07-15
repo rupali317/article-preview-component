@@ -319,11 +319,19 @@ ul {
   .tooltip-wrapper {
     left: inherit;
     right: -4.125rem; /* -66px */
-    bottom: 4.8rem; /* 76.8px */
+    bottom: 6rem; /* 96px */
   }
 
   .tooltip-wrapper::after {
-    content: "test-arrow";
+    content: "";
+    position: absolute; /* RRC: why can't it be relative? I noticed that when it is relative, translate does not seem to work */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: var(--space-s-1) solid transparent; /* RRC: Understand later why border-bottom can be omitted bbut not border-right and border-left */
+    border-right: var(--space-s-1) solid transparent;
+    border-top: var(--space-s-1) solid var(--color-neutral-5);
   }
 }
 /*************************************************************************/
