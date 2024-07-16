@@ -191,6 +191,13 @@ article > section {
   padding: var(--space-l-2) var(--space-l-1) var(--space-base);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-l-1);
+}
+
+section > div {
+  display: flex;
+  flex-direction: column;
   gap: var(--space-s-1);
 }
 
@@ -207,7 +214,6 @@ p {
 }
 
 article footer {
-  margin-top: var(--space-base);
   display: grid;
   grid-template-areas:
     "avatar name button"
@@ -302,10 +308,7 @@ ul {
 
   article > section {
     padding: var(--space-l-1) var(--space-xl-1);
-  }
-
-  article footer {
-    margin-top: var(--space-xxs-1);
+    gap: var(--space-base);
   }
 
   h1 {
