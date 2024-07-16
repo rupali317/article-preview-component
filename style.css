@@ -4,8 +4,8 @@
   /* Colors */
   --color-neutral-1: hsl(0, 0%, 100%); /* #FFFFFF */
   --color-neutral-2: hsl(210, 46%, 95%); /* #ECF2F8 */
-  --color-neutral-3: hsl(212, 23%, 69%); /* #9DAEC2 */
-  --color-neutral-4: hsl(214, 17%, 51%); /* #6E8098 */
+  --color-neutral-3: hsl(212, 23%, 48%); /* #5E7997 */
+  --color-neutral-4: hsl(214, 17%, 48%); /* ##66788F */
   --color-neutral-5: hsl(217, 19%, 35%); /* #48556A */
   --color-neutral-6: hsla(210, 29%, 84%, 50.34%); /* #C9D5E1 */
 
@@ -244,7 +244,7 @@ button > img {
 [role="tooltip"] {
   text-transform: uppercase;
   background-color: var(--color-neutral-5);
-  color: var(--color-neutral-3);
+  color: var(--color-neutral-2);
   letter-spacing: var(--letter-spacing-l);
   padding: var(--space-s-2) var(--space-l-1);
   border-bottom-left-radius: var(--border-radius-soft);
