@@ -152,10 +152,6 @@ button {
   height: var(--space-l-1);
 }
 
-.visible {
-  visibility: visible;
-}
-
 .invisible {
   visibility: hidden;
 }
