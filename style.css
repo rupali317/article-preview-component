@@ -195,7 +195,7 @@ article > section {
   gap: var(--space-l-1);
 }
 
-section > div {
+header {
   display: flex;
   flex-direction: column;
   gap: var(--space-s-1);
