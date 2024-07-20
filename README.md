@@ -72,7 +72,7 @@ Users should be able to:
 
 ### What I learned
 
-1. Able to craft an arrow using css tricks. Border width help determine the dimension of the arrow. 0 dimension is crucial in achieving the look along with making the adjacent borders as transparent. Removing the adjacent borders instead of making it transparent will not function as everything will be invisible especially when the dimension is set as 0.
+1. Am able to craft the tooltip's arrow using css tricks. Border width help determine the dimension of the arrow. 0 dimension is crucial in achieving the look along with making the adjacent borders as transparent. Removing the adjacent borders instead of making it transparent will not function as everything will be invisible especially when the dimension is set as 0.
 
 ```css
 .tooltip-wrapper::after {
