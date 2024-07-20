@@ -342,12 +342,12 @@ ul {
 
   .tooltip-wrapper::after {
     content: "";
-    position: absolute; /* RRC: why can't it be relative? I noticed that when it is relative, translate does not seem to work */
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-left: var(--space-s-1) solid transparent; /* RRC: Understand later why border-bottom can be omitted bbut not border-right and border-left */
+    border-left: var(--space-s-1) solid transparent;
     border-right: var(--space-s-1) solid transparent;
     border-top: var(--space-s-1) solid var(--color-neutral-5);
   }

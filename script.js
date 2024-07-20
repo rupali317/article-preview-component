@@ -23,5 +23,3 @@ function toggleShareButtonAttributes() {
     shareButton.setAttribute("aria-expanded", "true");
   }
 }
-
-/* RRC: Understand the purpose of the attributes by experimenting */
