@@ -14,7 +14,6 @@ This is a solution to the [Article preview component challenge on Frontend Mento
   - [Built with](#built-with)
   - [Tested with](#tested-with)
   - [What I learned](#what-i-learned)
-  - [Continued development / improvements](#continued-development--improvements)
   - [Useful resources](#useful-resources)
 - [Acknowledgement](#acknowledgement)
 - [Author](#author)
@@ -73,15 +72,56 @@ Users should be able to:
 
 ### What I learned
 
-TBD
+1. Able to craft an arrow using css tricks. Border width help determine the dimension of the arrow. 0 dimension is crucial in achieving the look along with making the adjacent borders as transparent. Removing the adjacent borders instead of making it transparent will not function as everything will be invisible especially when the dimension is set as 0.
 
-```html
-TBD
+```css
+.tooltip-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: var(--space-s-1) solid transparent;
+  border-right: var(--space-s-1) solid transparent;
+  border-top: var(--space-s-1) solid var(--color-neutral-5);
+}
 ```
 
-### Continued development / improvements
+2. Both aria-expanded and aria-describedby are needed for screen relader to read the content of the tooltip. A) Only aria-expanded=”false/true” without aria-describedby → It will only read the status if the button is expanded or not but will not read the content of the tooltip. B) Only aria-describedby” without aria-expanded → It will not read out if it is expanded or not. It wont read out the content of the tooltip.
 
-TBD
+```html
+<button
+  id="share-btn-js"
+  aria-label="Share article"
+  aria-description="You can share this article via Facebook, Twitter and Pinterest"
+  aria-haspopup="true"
+  aria-expanded="false"
+>
+  <img
+    src="./images/icon-share.svg"
+    width="15"
+    height="13"
+    alt=""
+    role="presentation"
+  />
+</button>
+<div class="tooltip-wrapper invisible" id="tooltip-wrapper-js">
+  <span id="tooltip" role="tooltip"> ... </span>
+</div>
+```
+
+```js
+function toggleShareButtonAttributes() {
+  if (tooltip.classList.contains("invisible")) {
+    shareButton.removeAttribute("aria-describedby");
+    shareButton.setAttribute("aria-expanded", "false");
+  } else {
+    shareButton.setAttribute("aria-describedby", "tooltip");
+    shareButton.setAttribute("aria-expanded", "true");
+  }
+}
+```
 
 ### Useful resources
 
