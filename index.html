@@ -19,7 +19,7 @@
       type="image/png"
     />
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <script src="script.js" type="module" defer></script>
+    <script src="main.js" defer></script>
     <title>Frontend Mentor | Article preview component</title>
   </head>
   <body>
@@ -55,7 +55,6 @@
             <button
               id="share-btn-js"
               aria-label="Share article"
-              aria-description="You can share this article via Facebook, Twitter and Pinterest"
               aria-haspopup="true"
               aria-expanded="false"
             >
@@ -68,7 +67,7 @@
               />
             </button>
             <div class="tooltip-wrapper invisible" id="tooltip-wrapper-js">
-              <span id="tooltip" role="tooltip">
+              <div id="tooltip" role="tooltip">
                 Share
                 <ul>
                   <li>
@@ -117,7 +116,7 @@
                     </a>
                   </li>
                 </ul>
-              </span>
+              </div>
             </div>
           </footer>
         </section>
